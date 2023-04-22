@@ -1,3 +1,13 @@
+# Changed made to the Repo
+
+This is a sample app forked from the Azure Docs. 
+
+- deploy-via-cli.sh has been added with commands following the [Microsoft Azure Kubernetes Service tutorial](https://learn.microsoft.com/en-us/azure/aks/tutorial-kubernetes-prepare-app) so it can be replicated.
+- azure-vote-hpa.yaml has been added as part of the above tutorial for autoscaling.
+- azure-vote-front folder has been added with helm chart following the [Quickstart Helm tutorial](https://learn.microsoft.com/en-us/azure/aks/quickstart-helm?tabs=azure-cli)
+
+# Azure Voting App
+
 ---
 page_type: sample
 languages:
@@ -7,8 +17,6 @@ products:
   - azure-redis-cache
 description: "This sample creates a multi-container application in an Azure Kubernetes Service (AKS) cluster."
 ---
-
-# Azure Voting App
 
 This sample creates a multi-container application in an Azure Kubernetes Service (AKS) cluster. The application interface has been built using Python / Flask. The data component is using Redis.
 
