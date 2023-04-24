@@ -1,0 +1,26 @@
+trigger: none
+pr: none
+
+stages:
+- stage: Build
+  jobs:
+  - job: BakeAndDeploy
+    pool:
+      vmImage: 'ubuntu-22.04'
+    steps:
+    - task: KubernetesManifest@0
+      name: bake
+      displayName: Bake K8s manifests from Helm chart
+      inputs:
+        action: bake
+        helmChart: azure-vote-front-helm/charts
+
+    - task: KubernetesManifest@0
+      displayName: Deploy K8s manifests
+      inputs:
+        kubernetesServiceConnection: someK8sSC
+        namespace: default
+        manifests: $(bake.manifestsBundle)
+        containers: |
+          redis: 17.3.17
+          azure-vote-front-helm 0.1.0
