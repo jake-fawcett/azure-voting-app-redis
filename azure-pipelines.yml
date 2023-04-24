@@ -24,3 +24,13 @@ stages:
         containers: |
           redis: 17.3.17
           azure-vote-front-helm: 0.1.0
+  - job: KubectlDeploy
+    pool:
+      vmImage: 'ubuntu-22.04'
+    steps:
+    - task: Kubernetes@1
+      displayName: kubectl apply
+      inputs:
+        connectionType: Kubernetes Service Connection
+        kubernetesServiceEndpoint: kube-app-sc
+        configuration: azure-vote-all-in-one-redis.yaml
