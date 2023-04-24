@@ -1,12 +1,11 @@
-# Changed made to the Repo
-
-This is a sample app forked from the Azure Docs. 
-
-- deploy-via-cli.sh has been added with commands following the [Microsoft Azure Kubernetes Service tutorial](https://learn.microsoft.com/en-us/azure/aks/tutorial-kubernetes-prepare-app) so it can be replicated.
-- azure-vote-hpa.yaml has been added as part of the above tutorial for autoscaling.
-- azure-vote-front folder has been added with helm chart following the [Quickstart Helm tutorial](https://learn.microsoft.com/en-us/azure/aks/quickstart-helm?tabs=azure-cli)
-
 # Azure Voting App
+
+This is a sample app forked from the Azure Docs that has been updated / modified following different tutorials and experimenting with Kubernetes.
+
+- kubectl.sh has been added with commands following the [Microsoft Azure Kubernetes Service tutorial](https://learn.microsoft.com/en-us/azure/aks/tutorial-kubernetes-prepare-app) so it can be replicated.
+- azure-vote-hpa.yaml has been added as part of the above tutorial for autoscaling.
+- helm.sh and azure-vote-front folder has been added with helm chart following the [Quickstart Helm tutorial](https://learn.microsoft.com/en-us/azure/aks/quickstart-helm?tabs=azure-cli)
+- azure-pipelines.yml has been created to experiement with Azure Pipeline tasks
 
 ---
 page_type: sample
