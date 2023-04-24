@@ -13,7 +13,7 @@ stages:
       displayName: Bake K8s manifests from Helm chart
       inputs:
         action: bake
-        helmChart: azure-vote-front-helm/charts
+        helmChart: azure-vote-front-helm
 
     - task: KubernetesManifest@0
       displayName: Deploy K8s manifests
