@@ -18,7 +18,7 @@ stages:
     - task: KubernetesManifest@0
       displayName: Deploy K8s manifests
       inputs:
-        kubernetesServiceConnection: someK8sSC
+        kubernetesServiceConnection: kube-app-sc
         namespace: default
         manifests: $(bake.manifestsBundle)
         containers: |
