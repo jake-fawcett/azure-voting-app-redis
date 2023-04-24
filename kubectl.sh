@@ -1,3 +1,6 @@
+# Script following Azure Tutorial 
+# https://learn.microsoft.com/en-us/azure/aks/tutorial-kubernetes-prepare-app
+
 resourceGroup="kube-app"
 containerRegistry="jakefkubeacr"
 containerRegistryLoginServer="${containerRegistry}.azurecr.io"
@@ -22,6 +25,8 @@ az aks create \
 az aks get-credentials --resource-group $resourceGroup --name $clusterName
 
 kubectl apply -f azure-vote-all-in-one-redis.yaml
+
+# Additional deployment created in azure-pipelines.yml to test Pipeline Deployment
 
 # - - - - - - - - - - - - - - - - Scale Application - - - - - - - - - - - - - - - -
 # Example Scale:
